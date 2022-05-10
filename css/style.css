@@ -6,11 +6,18 @@
 
 :root {
     --slider-max-width: 900px;
-    --color-hover-dot: red;
-    --color-active-dot: green;
+    --border-radius: 0.5rem;
+    --color-main-bg: #25282a;
+    --color-dot-default: #7395bf;
+    --color-dot-hover: #ffffff;
+    --color-dot-active: transparent;
+    --color-slider-text: #ffffff;
 }
 
-body {}
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: var(--color-main-bg);
+}
 
 /* ====================== */
 /*         Slider         */
@@ -19,8 +26,9 @@ body {}
 .slider {
     display: grid;
     max-width: var(--slider-max-width);
-    margin: 0 auto;
-    grid-template-columns: 75% 25%;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    grid-template-columns: 1fr auto;
     grid-template-areas:
         "images images"
         "text controls";
@@ -33,6 +41,7 @@ body {}
 /* ====================== */
 /*     Slider Control     */
 /* ====================== */
+
 .slider__controls {
     display: flex;
     grid-area: controls;
@@ -43,20 +52,22 @@ body {}
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    width: 60px;
+    height: 3rem;
+    width: 3rem;
 }
 
 .slider__control-dot {
     display: block;
     border-radius: 50%;
     padding: 10px;
-    border: 3px solid var(--color-active-dot);
-    transition: background 0.3s ease;
+    border: 3px solid var(--color-dot-default);
+    background-color: var(--color-dot-default);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .slider__control-label:hover .slider__control-dot {
-    background-color: var(--color-hover-dot);
+    background-color: var(--color-dot-hover);
+    border-color: var(--color-dot-hover);
 }
 
 #radio-1:checked~.slider__controls .slider__control-label:nth-child(1) .slider__control-dot {
@@ -80,14 +91,22 @@ body {}
 /* ====================== */
 
 .slider__images {
+    margin: 0;
+    padding: 0;
     grid-area: images;
     overflow: hidden;
     max-height: 600px;
     max-width: var(--slider-max-width);
+    border-radius: var(--border-radius);
 }
 
 .slider__image {
     display: none;
+}
+
+.slider__image img {
+    max-width: 100%;
+    display: block;
 }
 
 #radio-1:checked~.slider__images .slider__image:nth-child(1) { display: block; }
@@ -106,6 +125,7 @@ body {}
 
 .slider__text {
     display: none;
+    color: var(--color-slider-text);
 }
 
 #radio-1:checked~.slider__texts .slider__text:nth-child(1) { display: block; }
