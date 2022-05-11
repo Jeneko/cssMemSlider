@@ -6,6 +6,7 @@
 
 :root {
     --container-max-width: 960px;
+    --container-min-width: 320px;
     --border-radius: 0.5rem;
     --color-main-bg: #25282a;
     --color-dot-default: #7395bf;
@@ -22,6 +23,7 @@ body {
 }
 
 .container {
+    min-width: var(--container-min-width);
     max-width: var(--container-max-width);
     margin: auto;
     padding: 0 2rem;
