@@ -5,8 +5,8 @@
 /* ====================== */
 
 :root {
-    --container-max-width: 960px;
-    --container-min-width: 320px;
+    --container-max-width: 60rem;
+    --container-min-width: 20rem;
     --border-radius: 0.5rem;
     --color-main-bg: #25282a;
     --color-dot-default: #7395bf;
