@@ -33,7 +33,6 @@ body {
 .slider {
     display: grid;
     margin-top: 2rem;
-    /* padding: 0 2rem; */
     grid-template-columns: 1fr auto;
     grid-template-areas:
         "images images"
@@ -106,7 +105,6 @@ body {
     grid-area: images;
     overflow: hidden;
     list-style: none;
-    max-width: var(--slider-max-width);
     border-radius: var(--border-radius);
     display: flex;
 }
