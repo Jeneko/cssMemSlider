@@ -191,5 +191,6 @@ body {
 
     .slider__texts {
         justify-content: center;
+        text-align: center;
     }
 }
