@@ -166,3 +166,26 @@ body {
         transform: translateX(0);
     }
 }
+
+/* ====================== */
+/*     Mobile layout      */
+/* ====================== */
+
+@media screen and (max-width: 767px) {
+    .slider {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "images"
+            "controls"
+            "text";
+    }
+
+    .slider__controls {
+        margin: 0.5rem 0;
+        justify-content: center;
+    }
+
+    .slider__texts {
+        justify-content: center;
+    }
+}
