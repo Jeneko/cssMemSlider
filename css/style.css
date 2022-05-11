@@ -5,7 +5,7 @@
 /* ====================== */
 
 :root {
-    --slider-max-width: 900px;
+    --container-max-width: 960px;
     --border-radius: 0.5rem;
     --color-main-bg: #25282a;
     --color-dot-default: #7395bf;
@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    max-width: var(--slider-max-width);
+    max-width: var(--container-max-width);
     margin: auto;
     padding: 0 2rem;
 }
