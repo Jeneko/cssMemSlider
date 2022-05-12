@@ -149,18 +149,18 @@ body {
 
 .slider__text {
     flex-shrink: 0;
-    display: block;
+    width: 100%;
+    order: 2;
     visibility: hidden;
-    width: 0;
     color: var(--color-slider-text);
     transition: transform 0.3s ease;
 }
 
-#radio-1:checked~.slider__texts .slider__text:nth-child(1) { visibility: visible; width: 100%; animation: slideIn 0.3s ease forwards; }
-#radio-2:checked~.slider__texts .slider__text:nth-child(2) { visibility: visible; width: 100%; animation: slideIn 0.3s ease forwards; }
-#radio-3:checked~.slider__texts .slider__text:nth-child(3) { visibility: visible; width: 100%; animation: slideIn 0.3s ease forwards; }
-#radio-4:checked~.slider__texts .slider__text:nth-child(4) { visibility: visible; width: 100%; animation: slideIn 0.3s ease forwards; }
-#radio-5:checked~.slider__texts .slider__text:nth-child(5) { visibility: visible; width: 100%; animation: slideIn 0.3s ease forwards; }
+#radio-1:checked~.slider__texts .slider__text:nth-child(1) { visibility: visible; order: 1; animation: slideIn 0.3s ease forwards; }
+#radio-2:checked~.slider__texts .slider__text:nth-child(2) { visibility: visible; order: 1; animation: slideIn 0.3s ease forwards; }
+#radio-3:checked~.slider__texts .slider__text:nth-child(3) { visibility: visible; order: 1; animation: slideIn 0.3s ease forwards; }
+#radio-4:checked~.slider__texts .slider__text:nth-child(4) { visibility: visible; order: 1; animation: slideIn 0.3s ease forwards; }
+#radio-5:checked~.slider__texts .slider__text:nth-child(5) { visibility: visible; order: 1; animation: slideIn 0.3s ease forwards; }
 
 @keyframes slideIn {
     from {
@@ -190,7 +190,6 @@ body {
     }
 
     .slider__texts {
-        justify-content: center;
         text-align: center;
     }
 }
